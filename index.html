@@ -121,108 +121,310 @@
         header {
             text-align: center;
         }
+        /* Language Selector */
+        .language-selector {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: #fff;
+            padding: 10px;
+            border-radius: 8px;
+        }
+        .language-selector select {
+            padding: 5px;
+            font-size: 1rem;
+            background-color: #0072ff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+        }
     </style>
 </head>
 <body>
+
+    <!-- Language Selector -->
+    <div class="language-selector">
+        <select id="languageSelector" onchange="changeLanguage()">
+            <option value="tr">Türkçe</option>
+            <option value="en">English</option>
+            <option value="de">Deutsch</option>
+        </select>
+    </div>
+
     <div class="container">
         <!-- Header -->
         <header>
             <!-- Profil Fotoğrafı -->
             <img src="https://sametbzkrt16.github.io/Cv/images/sam.png" alt="Samet Bozkurt" class="profile-img">
-            <h1>Samet Bozkurt</h1>
+            <h1 id="name">Samet Bozkurt</h1>
             <div class="contact-info">
-                <span>Telefon: +90 545 830 68 49</span>
-                <span>E-posta: <a href="mailto:sametbozkurtceng@gmail.com">sametbozkurtceng@gmail.com</a></span>
-                <span>LinkedIn: <a href="https://www.linkedin.com/in/samet-bozkurt-616a6a33b/" target="_blank">LinkedIn Profilim</a></span>
-                <span>GitHub: <a href="https://github.com/sametbzkrt16" target="_blank">GitHub Profilim</a></span>
+                <span id="phone">Telefon: +90 545 830 68 49</span>
+                <span id="email">E-posta: <a href="mailto:sametbozkurtceng@gmail.com">sametbozkurtceng@gmail.com</a></span>
+                <span id="linkedin">LinkedIn: <a href="https://www.linkedin.com/in/samet-bozkurt-616a6a33b/" target="_blank">LinkedIn Profilim</a></span>
+                <span id="github">GitHub: <a href="https://github.com/sametbzkrt16" target="_blank">GitHub Profilim</a></span>
             </div>
         </header>
 
         <!-- Career Summary -->
         <section>
-            <h2 class="section-title">Kariyer Özeti</h2>
-            <p>Yaratıcı ve sonuç odaklı bir <strong>Web Developer</strong>, 1 yılı aşkın süredir yazılım geliştirme ve web tasarımı alanlarında deneyime sahibim. Kullanıcı dostu çözümler geliştirme konusunda uzmanım ve farklı projelerdeki tecrübelerimle kendimi geliştirmeye devam ediyorum. Takım çalışmasına yatkın, yenilikçi projelere katkı sağlamak ve teknik becerilerimi her geçen gün artırmak amacındayım.</p>
+            <h2 class="section-title" id="career-title">Kariyer Özeti</h2>
+            <p id="career-summary">Yaratıcı ve sonuç odaklı bir <strong>Web Developer</strong>, 1 yılı aşkın süredir yazılım geliştirme ve web tasarımı alanlarında deneyime sahibim. Kullanıcı dostu çözümler geliştirme konusunda uzmanım ve farklı projelerdeki tecrübelerimle kendimi geliştirmeye devam ediyorum. Takım çalışmasına yatkın, yenilikçi projelere katkı sağlamak ve teknik becerilerimi her geçen gün artırmak amacındayım.</p>
         </section>
 
         <!-- Skills -->
         <section>
-            <h2 class="section-title">Beceriler</h2>
+            <h2 class="section-title" id="skills-title">Beceriler</h2>
             <ul class="skills">
-                <li><strong>Web Geliştirme:</strong> HTML5, CSS3, JavaScript, C#</li>
-                <li><strong>Veritabanları:</strong> MSSQL, Firebase</li>
-                <li><strong>Araçlar & Teknolojiler:</strong> Git, GitHub</li>
-                <li><strong>Diğer:</strong> API geliştirme, RESTful servisler</li>
+                <li><strong id="web-dev">Web Geliştirme:</strong> HTML5, CSS3, JavaScript, C#</li>
+                <li><strong id="databases">Veritabanları:</strong> MSSQL, Firebase</li>
+                <li><strong id="tools">Araçlar & Teknolojiler:</strong> Git, GitHub</li>
+                <li><strong id="others">Diğer:</strong> API geliştirme, RESTful servisler</li>
             </ul>
         </section>
 
         <!-- Education -->
         <section>
-            <h2 class="section-title">Eğitim</h2>
+            <h2 class="section-title" id="education-title">Eğitim</h2>
             <ul class="education">
-                <li><strong>Bartın Üniversitesi</strong> - Bilgisayar Mühendisliği (2020 – 2025)</li>
+                <li><strong id="university">Bartın Üniversitesi</strong> - Bilgisayar Mühendisliği (2020 – 2025)</li>
             </ul>
         </section>
 
         <!-- Certifications -->
         <section>
-            <h2 class="section-title">Sertifikalar ve Eğitimler</h2>
+            <h2 class="section-title" id="certifications-title">Sertifikalar ve Eğitimler</h2>
             <ul>
-                <li>C# Sertifikası – BTK, 2024</li>
-                <li>HTML5 ile Web Geliştirme – BTK, 2024</li>
-                <li>JavaScript Temelleri – BTK, 2024</li>
-                <li>A2 Seviye İngilizce – BTK, 2024</li>
-                <li>A1 Seviye İngilizce – BTK, 2024</li>
+                <li id="cert1">C# Sertifikası – BTK, 2024</li>
+                <li id="cert2">HTML5 ile Web Geliştirme – BTK, 2024</li>
+                <li id="cert3">JavaScript Temelleri – BTK, 2024</li>
+                <li id="cert4">A2 Seviye İngilizce – BTK, 2024</li>
+                <li id="cert5">A1 Seviye İngilizce – BTK, 2024</li>
             </ul>
         </section>
 
-        <!-- Experience -->
-        <section>
-            <h2 class="section-title">Deneyim</h2>
-            <ul class="experience">
-                <li>
-                    <span class="job-title">Sanko Holding - Stajyer</span><br>
-                    <strong>2024 – 2025</strong>
-                    <ul>
-                        <li>Web geliştirme projelerinde yeni özellikler tasarladım ve geliştirdim.</li>
-                        <li>Veritabanı optimizasyonu sağladım ve projelerde takım üyeleriyle birlikte çalıştım.</li>
-                        <li>Unity ile projelerde yer aldım, yazılım geliştirme sürecini destekledim.</li>
-                        <li>Kullanıcı geri bildirimleri doğrultusunda sürekli iyileştirmeler yaptım.</li>
+                <!-- Experience -->
+                <section>
+                    <h2 class="section-title" id="experience-title">Deneyim</h2>
+                    <ul class="experience">
+                        <li>
+                            <span class="job-title" id="job-title">Sanko Holding - Stajyer</span><br>
+                            <strong id="job-duration">2024 – 2025</strong>
+                            <ul>
+                                <li id="job1">Web geliştirme projelerinde yeni özellikler tasarladım ve geliştirdim.</li>
+                                <li id="job2">Veritabanı optimizasyonu sağladım ve projelerde takım üyeleriyle birlikte çalıştım.</li>
+                                <li id="job3">Unity ile projelerde yer aldım, yazılım geliştirme sürecini destekledim.</li>
+                                <li id="job4">Kullanıcı geri bildirimleri doğrultusunda sürekli iyileştirmeler yaptım.</li>
+                            </ul>
+                        </li>
                     </ul>
-                </li>
-            </ul>
-        </section>
+                </section>
+        
+                <!-- Projects -->
+                <section>
+                    <h2 class="section-title" id="projects-title">Projeler</h2>
+                    <ul class="projects">
+                        <li>
+                            <span class="project-title" id="project1-title">VistoraMagaza</span><br>
+                            <strong id="project1-tech">Teknolojiler:</strong> Visual Studio, MSSQL, AI
+                            <ul>
+                                <li id="project1-desc1">Bir koltuk satış platformu geliştirdim; kullanıcılar ürünleri görebilir, sepetlerine ekleyebilir ve sosyal medya üzerinden takip edebilirler.</li>
+                                <li id="project1-desc2">Kullanıcı dostu bir arayüz tasarımı yaptım.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span class="project-title" id="project2-title">ErichomeStore</span><br>
+                            <strong id="project2-tech">Teknolojiler:</strong> Visual Studio, MSSQL, AI
+                            <ul>
+                                <li id="project2-desc1">Bir koltuk satış platformu geliştirdim; kullanıcılar ürünleri görebilir, sepetlerine ekleyebilir ve sosyal medya üzerinden takip edebilirler.</li>
+                                <li id="project2-desc2">Kullanıcı dostu bir arayüz tasarımı yaptım.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </section>
+        
+                <!-- Contact Section -->
+                <section>
+                    <h2 class="section-title" id="contact-title">İletişim</h2>
+                    <p id="contact-summary">Web geliştirme projelerimde, yazılım geliştirme konularında veya herhangi bir işbirliği yapmak isterseniz, lütfen benimle iletişime geçin.</p>
+                    <a href="mailto:sametbozkurtceng@gmail.com" class="button" id="email-button">E-posta Gönder</a>
+                </section>
+            </div>
+        
+            <script>
+                const translations = {
+                    tr: {
+                        name: "Samet Bozkurt",
+                        phone: "Telefon: +90 545 830 68 49",
+                        email: "E-posta: <a href='mailto:sametbozkurtceng@gmail.com'>sametbozkurtceng@gmail.com</a>",
+                        linkedin: "LinkedIn: <a href='https://www.linkedin.com/in/samet-bozkurt-616a6a33b/' target='_blank'>LinkedIn Profilim</a>",
+                        github: "GitHub: <a href='https://github.com/sametbzkrt16' target='_blank'>GitHub Profilim</a>",
+                        careerTitle: "Kariyer Özeti",
+                        careerSummary: "Yaratıcı ve sonuç odaklı bir <strong>Web Developer</strong>, 1 yılı aşkın süredir yazılım geliştirme ve web tasarımı alanlarında deneyime sahibim. Kullanıcı dostu çözümler geliştirme konusunda uzmanım ve farklı projelerdeki tecrübelerimle kendimi geliştirmeye devam ediyorum. Takım çalışmasına yatkın, yenilikçi projelere katkı sağlamak ve teknik becerilerimi her geçen gün artırmak amacındayım.",
+                        skillsTitle: "Beceriler",
+                        webDev: "Web Geliştirme: HTML5, CSS3, JavaScript, C#",
+                        databases: "Veritabanları: MSSQL, Firebase",
+                        tools: "Araçlar & Teknolojiler: Git, GitHub",
+                        others: "Diğer: API geliştirme, RESTful servisler",
+                        educationTitle: "Eğitim",
+                        university: "Bartın Üniversitesi - Bilgisayar Mühendisliği (2020 – 2025)",
+                        certificationsTitle: "Sertifikalar ve Eğitimler",
+                        cert1: "C# Sertifikası – BTK, 2024",
+                        cert2: "HTML5 ile Web Geliştirme – BTK, 2024",
+                        cert3: "JavaScript Temelleri – BTK, 2024",
+                        cert4: "A2 Seviye İngilizce – BTK, 2024",
+                        cert5: "A1 Seviye İngilizce – BTK, 2024",
+                        experienceTitle: "Deneyim",
+                        jobTitle: "Sanko Holding - Stajyer",
+                        jobDuration: "2024 – 2025",
+                        job1: "Web geliştirme projelerinde yeni özellikler tasarladım ve geliştirdim.",
+                        job2: "Veritabanı optimizasyonu sağladım ve projelerde takım üyeleriyle birlikte çalıştım.",
+                        job3: "Unity ile projelerde yer aldım, yazılım geliştirme sürecini destekledim.",
+                        job4: "Kullanıcı geri bildirimleri doğrultusunda sürekli iyileştirmeler yaptım.",
+                        projectsTitle: "Projeler",
+                        project1Title: "VistoraMagaza",
+                        project1Tech: "Teknolojiler: Visual Studio, MSSQL, AI",
+                        project1Desc1: "Bir koltuk satış platformu geliştirdim; kullanıcılar ürünleri görebilir, sepetlerine ekleyebilir ve sosyal medya üzerinden takip edebilirler.",
+                        project1Desc2: "Kullanıcı dostu bir arayüz tasarımı yaptım.",
+                        project2Title: "ErichomeStore",
+                        project2Tech: "Teknolojiler: Visual Studio, MSSQL, AI",
+                        project2Desc1: "Bir koltuk satış platformu geliştirdim; kullanıcılar ürünleri görebilir, sepetlerine ekleyebilir ve sosyal medya üzerinden takip edebilirler.",
+                        project2Desc2: "Kullanıcı dostu bir arayüz tasarımı yaptım.",
+                        contactTitle: "İletişim",
+                        contactSummary: "Web geliştirme projelerimde, yazılım geliştirme konularında veya herhangi bir işbirliği yapmak isterseniz, lütfen benimle iletişime geçin.",
+                        emailButton: "E-posta Gönder",
+                    },
+                    en: {
+                        name: "Samet Bozkurt",
+                        phone: "Phone: +90 545 830 68 49",
+                        email: "Email: <a href='mailto:sametbozkurtceng@gmail.com'>sametbozkurtceng@gmail.com</a>",
+                        linkedin: "LinkedIn: <a href='https://www.linkedin.com/in/samet-bozkurt-616a6a33b/' target='_blank'>My LinkedIn Profile</a>",
+                        github: "GitHub: <a href='https://github.com/sametbzkrt16' target='_blank'>My GitHub Profile</a>",
+                        careerTitle: "Career Summary",
+                        careerSummary: "Creative and results-oriented <strong>Web Developer</strong> with over 1 year of experience in software development and web design. I specialize in creating user-friendly solutions and continuously improving my skills with diverse projects. I am eager to contribute to innovative projects and enhance my technical abilities every day.",
+                        skillsTitle: "Skills",
+                        webDev: "Web Development: HTML5, CSS3, JavaScript, C#",
+                        databases: "Databases: MSSQL, Firebase",
+                        tools: "Tools & Technologies: Git, GitHub",
+                        others: "Others: API development, RESTful services",
+                        educationTitle: "Education",
+                        university: "Bartın University - Computer Engineering (2020 – 2025)",
+                        certificationsTitle: "Certifications & Training",
+                        cert1: "C# Certification – BTK, 2024",
+                        cert2: "Web Development with HTML5 – BTK, 2024",
+                        cert3: "JavaScript Basics – BTK, 2024",
+                        cert4: "A2 Level English – BTK, 2024",
+                        cert5: "A1 Level English – BTK, 2024",
+                        experienceTitle: "Experience",
+                        jobTitle: "Sanko Holding - Intern",
+                        jobDuration: "2024 – 2025",
+                        job1: "Designed and developed new features for web development projects.",
+                        job2: "Optimized databases and collaborated with team members in projects.",
+                        job3: "Worked with Unity on projects, supporting the software development process.",
+                        job4: "Made continuous improvements based on user feedback.",
+                        projectsTitle: "Projects",
+                project1Title: "VistoraMagaza",
+                project1Tech: "Technologies: Visual Studio, MSSQL, AI",
+                project1Desc1: "Developed a seat sales platform where users can view products, add them to their cart, and follow the products through social media.",
+                project1Desc2: "Designed a user-friendly interface.",
+                project2Title: "ErichomeStore",
+                project2Tech: "Technologies: Visual Studio, MSSQL, AI",
+                project2Desc1: "Developed a seat sales platform where users can view products, add them to their cart, and follow the products through social media.",
+                project2Desc2: "Designed a user-friendly interface.",
+                contactTitle: "Contact",
+                contactSummary: "If you're interested in collaborating on web development projects or software development topics, please feel free to reach out to me.",
+                emailButton: "Send Email",
+            },
+            de: {
+                name: "Samet Bozkurt",
+                phone: "Telefon: +90 545 830 68 49",
+                email: "E-Mail: <a href='mailto:sametbozkurtceng@gmail.com'>sametbozkurtceng@gmail.com</a>",
+                linkedin: "LinkedIn: <a href='https://www.linkedin.com/in/samet-bozkurt-616a6a33b/' target='_blank'>Mein LinkedIn Profil</a>",
+                github: "GitHub: <a href='https://github.com/sametbzkrt16' target='_blank'>Mein GitHub Profil</a>",
+                careerTitle: "Karriere Zusammenfassung",
+                careerSummary: "Kreativer und ergebnisorientierter <strong>Web Developer</strong> mit über 1 Jahr Erfahrung in Softwareentwicklung und Webdesign. Ich spezialisiere mich auf die Erstellung benutzerfreundlicher Lösungen und verbessere kontinuierlich meine Fähigkeiten mit verschiedenen Projekten. Ich möchte zu innovativen Projekten beitragen und meine technischen Fähigkeiten täglich erweitern.",
+                skillsTitle: "Fähigkeiten",
+                webDev: "Web Entwicklung: HTML5, CSS3, JavaScript, C#",
+                databases: "Datenbanken: MSSQL, Firebase",
+                tools: "Werkzeuge & Technologien: Git, GitHub",
+                others: "Andere: API Entwicklung, RESTful Services",
+                educationTitle: "Ausbildung",
+                university: "Bartın Universität - Computer Engineering (2020 – 2025)",
+                certificationsTitle: "Zertifikate & Schulungen",
+                cert1: "C# Zertifikat – BTK, 2024",
+                cert2: "Web Entwicklung mit HTML5 – BTK, 2024",
+                cert3: "JavaScript Grundlagen – BTK, 2024",
+                cert4: "A2 Englisch Niveau – BTK, 2024",
+                cert5: "A1 Englisch Niveau – BTK, 2024",
+                experienceTitle: "Erfahrung",
+                jobTitle: "Sanko Holding - Praktikant",
+                jobDuration: "2024 – 2025",
+                job1: "Entwicklung und Gestaltung neuer Features für Webentwicklungsprojekte.",
+                job2: "Optimierung von Datenbanken und Zusammenarbeit mit Teammitgliedern in Projekten.",
+                job3: "Arbeit mit Unity an Projekten, Unterstützung des Softwareentwicklungsprozesses.",
+                job4: "Kontinuierliche Verbesserungen auf der Grundlage von Benutzerfeedback.",
+                projectsTitle: "Projekte",
+                project1Title: "VistoraMagaza",
+                project1Tech: "Technologien: Visual Studio, MSSQL, KI",
+                project1Desc1: "Entwickelte eine Sitzverkaufsplattform, auf der Nutzer Produkte ansehen, in ihren Warenkorb legen und über soziale Medien verfolgen können.",
+                project1Desc2: "Gestaltete eine benutzerfreundliche Oberfläche.",
+                project2Title: "ErichomeStore",
+                project2Tech: "Technologien: Visual Studio, MSSQL, KI",
+                project2Desc1: "Entwickelte eine Sitzverkaufsplattform, auf der Nutzer Produkte ansehen, in ihren Warenkorb legen und über soziale Medien verfolgen können.",
+                project2Desc2: "Gestaltete eine benutzerfreundliche Oberfläche.",
+                contactTitle: "Kontakt",
+                contactSummary: "Wenn Sie an einer Zusammenarbeit bei Webentwicklungsprojekten oder Softwarethemen interessiert sind, können Sie mich gerne kontaktieren.",
+                emailButton: "E-Mail senden",
+            },
+        };
 
-        <!-- Projects -->
-        <section>
-            <h2 class="section-title">Projeler</h2>
-            <ul class="projects">
-                <li>
-                    <span class="project-title">VistoraMagaza</span><br>
-                    <strong>Teknolojiler:</strong> Visual Studio, MSSQL, AI
-                    <ul>
-                        <li>Bir koltuk satış platformu geliştirdim; kullanıcılar ürünleri görebilir, sepetlerine ekleyebilir ve sosyal medya üzerinden takip edebilirler.</li>
-                        <li>Kullanıcı dostu bir arayüz tasarımı yaptım.</li>
-                    </ul>
-                </li>
-                <li>
-                    <span class="project-title">ErichomeStore</span><br>
-                    <strong>Teknolojiler:</strong> Visual Studio, MSSQL, AI
-                    <ul>
-                        <li>Bir koltuk satış platformu geliştirdim; kullanıcılar ürünleri görebilir, sepetlerine ekleyebilir ve sosyal medya üzerinden takip edebilirler.</li>
-                        <li>Kullanıcı dostu bir arayüz tasarımı yaptım.</li>
-                    </ul>
-                </li>
-                <!-- Add more projects here if needed -->
-            </ul>
-        </section>
+        // Language change function
+        function changeLanguage(language) {
+            document.querySelector('h1').textContent = translations[language].name;
+            document.querySelector('.contact-info span:nth-child(1)').innerHTML = translations[language].phone;
+            document.querySelector('.contact-info span:nth-child(2)').innerHTML = translations[language].email;
+            document.querySelector('.contact-info span:nth-child(3)').innerHTML = translations[language].linkedin;
+            document.querySelector('.contact-info span:nth-child(4)').innerHTML = translations[language].github;
+            document.getElementById('career-title').textContent = translations[language].careerTitle;
+            document.getElementById('career-summary').innerHTML = translations[language].careerSummary;
+            document.getElementById('skills-title').textContent = translations[language].skillsTitle;
+            document.getElementById('webDev').innerHTML = translations[language].webDev;
+            document.getElementById('databases').innerHTML = translations[language].databases;
+            document.getElementById('tools').innerHTML = translations[language].tools;
+            document.getElementById('others').innerHTML = translations[language].others;
+            document.getElementById('education-title').textContent = translations[language].educationTitle;
+            document.getElementById('university').innerHTML = translations[language].university;
+            document.getElementById('certifications-title').textContent = translations[language].certificationsTitle;
+            document.getElementById('cert1').innerHTML = translations[language].cert1;
+            document.getElementById('cert2').innerHTML = translations[language].cert2;
+            document.getElementById('cert3').innerHTML = translations[language].cert3;
+            document.getElementById('cert4').innerHTML = translations[language].cert4;
+            document.getElementById('cert5').innerHTML = translations[language].cert5;
+            document.getElementById('experience-title').textContent = translations[language].experienceTitle;
+            document.getElementById('job-title').textContent = translations[language].jobTitle;
+            document.getElementById('job-duration').innerHTML = translations[language].jobDuration;
+            document.getElementById('job1').innerHTML = translations[language].job1;
+            document.getElementById('job2').innerHTML = translations[language].job2;
+            document.getElementById('job3').innerHTML = translations[language].job3;
+            document.getElementById('job4').innerHTML = translations[language].job4;
+            document.getElementById('projects-title').textContent = translations[language].projectsTitle;
+            document.getElementById('project1-title').textContent = translations[language].project1Title;
+            document.getElementById('project1-tech').innerHTML = translations[language].project1Tech;
+            document.getElementById('project1-desc1').innerHTML = translations[language].project1Desc1;
+            document.getElementById('project1-desc2').innerHTML = translations[language].project1Desc2;
+            document.getElementById('project2-title').textContent = translations[language].project2Title;
+            document.getElementById('project2-tech').innerHTML = translations[language].project2Tech;
+            document.getElementById('project2-desc1').innerHTML = translations[language].project2Desc1;
+            document.getElementById('project2-desc2').innerHTML = translations[language].project2Desc2;
+            document.getElementById('contact-title').textContent = translations[language].contactTitle;
+            document.getElementById('contact-summary').innerHTML = translations[language].contactSummary;
+            document.getElementById('email-button').innerHTML = translations[language].emailButton;
+        }
 
-        <!-- Contact Section -->
-        <section>
-            <h2 class="section-title">İletişim</h2>
-            <p>Web geliştirme projelerimde, yazılım geliştirme konularında veya herhangi bir işbirliği yapmak isterseniz, lütfen benimle iletişime geçin.</p>
-            <a href="mailto:sametbozkurtceng@gmail.com" class="button">E-posta Gönder</a>
-        </section>
-    </div>
+        // Event listeners for language buttons
+        document.getElementById('tr-btn').addEventListener('click', () => changeLanguage('tr'));
+        document.getElementById('en-btn').addEventListener('click', () => changeLanguage('en'));
+        document.getElementById('de-btn').addEventListener('click', () => changeLanguage('de'));
+    </script>
 </body>
 </html>
 
