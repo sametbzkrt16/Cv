@@ -1,109 +1,224 @@
 <!DOCTYPE html>
 <html lang="tr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kişisel CV</title>
+    <title>Samet Bozkurt - Özgeçmiş</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             line-height: 1.6;
-            background-color: #f4f4f9;
             margin: 0;
             padding: 0;
+            background-color: #f4f4f4;
         }
 
         .container {
-            max-width: 800px;
-            margin: 20px auto;
-            background: #fff;
+            width: 80%;
+            margin: 0 auto;
             padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            background-color: white;
         }
 
-        header {
-            text-align: center;
-            border-bottom: 2px solid #ddd;
-            padding-bottom: 10px;
+        h1,
+        h2,
+        h3 {
+            color: #333;
+        }
+
+        .contact-info {
             margin-bottom: 20px;
         }
 
-        header h1 {
-            margin: 0;
-            font-size: 2em;
-            color: #333;
+        .contact-info span {
+            display: block;
+            margin: 5px 0;
         }
 
-        header p {
+        .skills ul,
+        .education ul,
+        .experience ul,
+        .projects ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .skills li,
+        .experience li,
+        .projects li {
+            background-color: #f1f1f1;
+            margin: 5px 0;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .experience .job-title,
+        .projects .project-title {
+            font-weight: bold;
+        }
+
+        .section-title {
+            background-color: #333;
+            color: white;
+            padding: 5px;
+            margin: 20px 0 10px 0;
+        }
+
+        .reference,
+        .volunteer {
+            font-style: italic;
             color: #555;
         }
 
-        h2 {
+        a {
             color: #333;
-            border-bottom: 2px solid #007BFF;
-            padding-bottom: 5px;
-            margin-bottom: 10px;
-        }
-
-        .contact-info a {
-            color: #007BFF;
             text-decoration: none;
         }
 
-        .contact-info a:hover {
+        a:hover {
             text-decoration: underline;
-        }
-
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        ul li {
-            margin-bottom: 10px;
-        }
-
-        strong {
-            color: #007BFF;
         }
     </style>
 </head>
+
 <body>
     <div class="container">
+        <!-- Header -->
         <header>
-            <h1>Adınız Soyadınız</h1>
-            <p>Web Geliştirici | Grafik Tasarımcı | Yazılım Mühendisi</p>
+            <h1>Samet Bozkurt</h1>
+            <div class="contact-info">
+                <span>Telefon: +90 545 830 68 49</span>
+                <span>E-posta: sametbozkurtceng@gmail.com</span>
+                <span>LinkedIn: <a href="https://www.linkedin.com/in/samet-bozkurt-616a6a33b/" target="_blank">LinkedIn
+                        Profilim</a></span>
+                <span>GitHub: <a href="https://github.com/sametbzkrt16" target="_blank">GitHub Profilim</a></span>
+            </div>
         </header>
-        <section class="contact-info">
-            <h2>İletişim Bilgileri</h2>
-            <p>Email: <a href="mailto:ornek@ornek.com">ornek@ornek.com</a></p>
-            <p>Telefon: +90 123 456 78 90</p>
-            <p>Adres: İstanbul, Türkiye</p>
+
+        <!-- Career Summary -->
+        <section>
+            <h2 class="section-title">Kariyer Özeti</h2>
+            <p>Yaratıcı ve sonuç odaklı bir <strong>Web Developer</strong>, 1 yılı aşkın süredir yazılım geliştirme ve
+                web tasarımı alanlarında deneyime sahibim. Kullanıcı dostu çözümler geliştirme konusunda uzmanım ve
+                farklı projelerdeki tecrübelerimle kendimi geliştirmeye devam ediyorum. Takım çalışmasına yatkın,
+                yenilikçi projelere katkı sağlamak ve teknik becerilerimi her geçen gün artırmak amacındayım.</p>
         </section>
-        <section class="education">
-            <h2>Eğitim</h2>
-            <ul>
-                <li><strong>Bilgisayar Mühendisliği</strong> - Örnek Üniversitesi (2015 - 2019)</li>
-                <li><strong>Web Geliştirme Kursu</strong> - Udemy (2020)</li>
+
+        <!-- Skills -->
+        <section>
+            <h2 class="section-title">Beceriler</h2>
+            <ul class="skills">
+                <li><strong>Web Geliştirme:</strong> HTML5, CSS3, JavaScript, C#</li>
+                <li><strong>Veritabanları:</strong> MSSQL, Firebase</li>
+                <li><strong>Araçlar & Teknolojiler:</strong> Git, GitHub</li>
+                <li><strong>Diğer:</strong> API geliştirme, RESTful servisler</li>
             </ul>
         </section>
-        <section class="experience">
-            <h2>Deneyim</h2>
-            <ul>
-                <li><strong>Frontend Developer</strong> - Örnek Şirket (2020 - Günümüz)</li>
-                <li><strong>Stajyer Yazılım Geliştirici</strong> - Örnek Teknoloji (2019)</li>
+
+        <!-- Education -->
+        <section>
+            <h2 class="section-title">Eğitim</h2>
+            <ul class="education">
+                <li><strong>Bartın Üniversitesi</strong> - Bilgisayar Mühendisliği (2020 – 2025)</li>
             </ul>
         </section>
-        <section class="skills">
-            <h2>Yetenekler</h2>
+
+        <!-- Certifications -->
+        <section>
+            <h2 class="section-title">Sertifikalar ve Eğitimler</h2>
             <ul>
-                <li>HTML, CSS, JavaScript</li>
-                <li>React, Angular</li>
-                <li>Photoshop, Figma</li>
-                <li>MS SQL, MySQL</li>
+                <li>C# Sertifikası – BTK, 2024</li>
+                <li>HTML5 ile Web Geliştirme – BTK, 2024</li>
+                <li>JavaScript Temelleri – BTK, 2024</li>
+                <li>A2 Seviye İngilizce – BTK, 2024</li>
+                <li>A1 Seviye İngilizce – BTK, 2024</li>
             </ul>
+        </section>
+
+        <!-- Experience -->
+        <section>
+            <h2 class="section-title">Deneyim</h2>
+            <ul class="experience">
+                <li>
+                    <span class="job-title">Sanko Holding - Stajyer</span><br>
+                    <strong>2024 – 2025</strong>
+                    <ul>
+                        <li>Web geliştirme projelerinde yeni özellikler tasarladım ve geliştirdim.</li>
+                        <li>Veritabanı optimizasyonu sağladım ve projelerde takım üyeleriyle birlikte çalıştım.</li>
+                        <li>Unity ile projelerde yer aldım, yazılım geliştirme sürecini destekledim.</li>
+                        <li>Kullanıcı geri bildirimleri doğrultusunda sürekli iyileştirmeler yaptım.</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+
+        <!-- Projects -->
+        <section>
+            <h2 class="section-title">Projeler</h2>
+            <ul class="projects">
+                <li>
+                    <span class="project-title">VistoraMagaza</span><br>
+                    <strong>Teknolojiler:</strong> Visual Studio, MSSQL, AI
+                    <ul>
+                        <li>Bir koltuk satış platformu geliştirdim; kullanıcılar ürünleri görebilir, sepetlerine
+                            ekleyebilir ve sosyal medya üzerinden takip edebilirler.</li>
+                        <li>Kullanıcı dostu bir arayüz tasarımı yaptım.</li>
+                    </ul>
+                </li>
+                <li>
+                    <span class="project-title">ErichomeStore</span><br>
+                    <strong>Teknolojiler:</strong> Visual Studio, MSSQL, AI
+                    <ul>
+                        <li>Bir koltuk satış platformu geliştirdim; kullanıcılar ürünleri görebilir, sepetlerine
+                            ekleyebilir ve sosyal medya üzerinden takip edebilirler.</li>
+                        <li>Kullanıcı dostu bir arayüz tasarımı yaptım.</li>
+                    </ul>
+                </li>
+                <li>
+                    <span class="project-title">KozmetikSatis</span><br>
+                    <strong>Teknolojiler:</strong> Visual Studio, MSSQL, AI
+                    <ul>
+                        <li>Bir kozmetik satış platformu geliştirdim; kullanıcılar ürünleri görebilir, sepetlerine
+                            ekleyebilir ve sosyal medya üzerinden takip edebilirler.</li>
+                        <li>Kullanıcı dostu bir arayüz tasarımı yaptım.</li>
+                    </ul>
+                </li>
+                <li>
+                    <span class="project-title">YesilBursa</span><br>
+                    <strong>Teknolojiler:</strong> Visual Studio, MSSQL, AI
+                    <ul>
+                        <li>Bursa ile ilgili olan her şeyi (belediye, etkinlik, iş ilanları, gezilecek yerler vs.) bir
+                            web sitesinde toplamayı hedefledim.</li>
+                        <li>Kullanıcı dostu bir arayüz tasarımı yaptım.</li>
+                    </ul>
+                </li>
+                <li>
+                    <span class="project-title">MyDekor</span><br>
+                    <strong>Teknolojiler:</strong> Visual Studio, MSSQL, AI
+                    <ul>
+                        <li>Bir dekorasyon ve mobilya satış platformu geliştirdim; kullanıcılar ürünleri görebilir,
+                            kategorilere ayırabilir ve sosyal medya üzerinden takip edebilirler.</li>
+                        <li>Kullanıcı dostu bir arayüz tasarımı yaptım.</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+
+        <!-- Volunteer -->
+        <section>
+            <h2 class="section-title">Gönüllü Çalışmalar ve Katılımlar</h2>
+            <ul>
+                <li><strong>[Etkinlik Adı]</strong> – [Pozisyon veya Rol], [Tarih]</li>
+            </ul>
+        </section>
+
+        <!-- References -->
+        <section>
+            <h2 class="section-title">Referanslar</h2>
+            <p class="reference">Referanslar isteğe bağlıdır ve talep üzerine sağlanacaktır.</p>
         </section>
     </div>
 </body>
+
 </html>
